@@ -529,8 +529,7 @@ section { position: relative; z-index: 1; padding: 100px 48px; }
 .endpoint-desc { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .endpoint-arrow { font-size: 16px; color: var(--border); transition: color 0.2s, transform 0.2s; }
 .endpoint-row:hover .endpoint-arrow { color: var(--accent); transform: translateX(4px); }
-.endpoint-row.combined-ep { border-left: 2px solid rgba(123,97,255,0.4); }
-.endpoint-row.combined-ep .endpoint-path { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
 
 footer { position: relative; z-index: 1; padding: 64px 48px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
 .footer-author { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
@@ -962,7 +961,7 @@ footer { position: relative; z-index: 1; padding: 64px 48px; border-top: 1px sol
   <div class="endpoints-list reveal">
     <div class="endpoint-row"><div class="method post">POST</div><div class="endpoint-path">/moderate/text</div><div class="endpoint-desc">Analyze text content — returns risk score, severity, action</div><div class="endpoint-arrow">→</div></div>
     <div class="endpoint-row"><div class="method post">POST</div><div class="endpoint-path">/moderate/image</div><div class="endpoint-desc">Analyze image file via CLIP + ResNet18</div><div class="endpoint-arrow">→</div></div>
-    <div class="endpoint-row combined-ep"><div class="method post">POST</div><div class="endpoint-path">/moderate/combined</div><div class="endpoint-desc">Analyze text + image together with user context — XGBoost fusion</div><div class="endpoint-arrow">→</div></div>
+    <div class="endpoint-row"><div class="method post">POST</div><div class="endpoint-path">/moderate/combined</div><div class="endpoint-desc">Analyze text + image together with user context — XGBoost fusion</div><div class="endpoint-arrow">→</div></div>
     <div class="endpoint-row"><div class="method get">GET</div><div class="endpoint-path">/dashboard</div><div class="endpoint-desc">Live monitoring dashboard — real-time decision charts</div><div class="endpoint-arrow">→</div></div>
     <div class="endpoint-row"><div class="method get">GET</div><div class="endpoint-path">/health</div><div class="endpoint-desc">System health check — model status + scheduler state</div><div class="endpoint-arrow">→</div></div>
     <div class="endpoint-row"><div class="method get">GET</div><div class="endpoint-path">/audit/logs</div><div class="endpoint-desc">Full audit trail with agent reasoning and decision records</div><div class="endpoint-arrow">→</div></div>
